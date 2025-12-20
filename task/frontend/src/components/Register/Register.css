@@ -1,0 +1,242 @@
+/* Enhanced Register.css - Unified with Login.css Purple Theme (2025 Trends) */
+
+:root {
+    --primary-light: #f3e8ff;
+    /* Very light purple */
+    --primary: #a78bfa;
+    /* Soft violet accent */
+    --primary-main: #8b5cf6;
+    /* Main purple */
+    --primary-dark: #7c3aed;
+    /* Hover purple */
+    --primary-darker: #4c1d95;
+    /* Deep purple for headings */
+    --bg-start: #f3e8ff;
+    --bg-end: #ede9fe;
+    --card-bg: rgba(255, 255, 255, 0.78);
+    --card-border: rgba(167, 139, 250, 0.3);
+    --text-main: #6b7280;
+    --text-accent: #7c3aed;
+    --shadow-color: rgba(139, 92, 246, 0.25);
+    --blur: 16px;
+}
+
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
+    font-family: "Poppins", sans-serif;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Subtle floating background accents - matching login */
+
+.register-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 15% 85%, rgba(167, 139, 250, 0.25) 0%, transparent 50%), radial-gradient(circle at 85% 15%, rgba(139, 92, 246, 0.2) 0%, transparent 50%);
+    animation: drift 25s ease-in-out infinite;
+}
+
+@keyframes drift {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(6%, 6%) rotate(2deg);
+    }
+}
+
+.register-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
+    padding: 45px 40px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 20px 45px var(--shadow-color);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.register-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 60px rgba(139, 92, 246, 0.35);
+}
+
+.register-card h2 {
+    margin-bottom: 8px;
+    color: var(--primary-darker);
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: var(--text-main);
+    margin-bottom: 28px;
+    opacity: 0.9;
+}
+
+.register-card input {
+    width: 100%;
+    padding: 15px 18px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.register-card input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.25);
+    background: #ffffff;
+}
+
+.register-card input::placeholder {
+    color: #9ca3af;
+}
+
+.register-card button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--primary-main) 0%, var(--primary-dark) 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.register-card button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transition: left 0.7s;
+}
+
+.register-card button:hover {
+    background: linear-gradient(135deg, #9f67ff 0%, #6d28d9 100%);
+    box-shadow: 0 10px 28px rgba(139, 92, 246, 0.45);
+    transform: translateY(-3px);
+}
+
+.register-card button:hover::before {
+    left: 100%;
+}
+
+.register-card button:active {
+    transform: translateY(0);
+}
+
+.login-text {
+    margin-top: 28px;
+    font-size: 20px;
+    color: var(--text-main);
+}
+
+.login-text span {
+    color: var(--text-accent);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 1px dashed var(--text-accent);
+    padding-bottom: 2px;
+}
+
+.login-text span:hover {
+    color: var(--primary-dark);
+    border-bottom: 1px solid var(--primary-dark);
+}
+
+
+/* Smooth fade-in animations */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.register-card>* {
+    animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.register-card h2 {
+    animation-delay: 0.1s;
+}
+
+.subtitle {
+    animation-delay: 0.2s;
+}
+
+.register-card input:nth-of-type(1) {
+    animation-delay: 0.3s;
+}
+
+.register-card input:nth-of-type(2) {
+    animation-delay: 0.4s;
+}
+
+.register-card input:nth-of-type(3) {
+    animation-delay: 0.5s;
+}
+
+
+/* Common for register forms */
+
+.register-card button {
+    animation-delay: 0.6s;
+}
+
+.login-text {
+    animation-delay: 0.7s;
+}
+
+
+/* Responsive improvements */
+
+@media (max-width: 480px) {
+    .register-card {
+        padding: 35px 25px;
+        margin: 0 15px;
+        border-radius: 18px;
+    }
+    .register-card h2 {
+        font-size: 26px;
+    }
+    .register-card input,
+    .register-card button {
+        padding: 14px 16px;
+    }
+}
