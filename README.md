@@ -255,6 +255,13 @@ EMAIL_PASS=your_gmail_app_password
 NODE_ENV=development
 PORT=5000
 ```
+## Demo
+![Login](Demo/login.PNG)
+![Dashboard](Demo/dashboard.PNG)
+![Claim Evaluation](Demo/claim1.PNG)
+![](Demo/claim2.PNG)
+![Credibility Increment](Demo/inCre.PNG)
+![Admin](Demo/creReq.PNG)
 
 ## Initialize Admin User
 
@@ -264,5 +271,6 @@ npm run init-admin
 ```
 
 ## License
+
 
 This project is licensed under the MIT License.
