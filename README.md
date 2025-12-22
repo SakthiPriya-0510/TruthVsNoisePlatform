@@ -256,12 +256,12 @@ NODE_ENV=development
 PORT=5000
 ```
 ## Demo
-![Login](Demo/login.PNG)
-![Dashboard](Demo/dashboard.PNG)
-![Claim Evaluation](Demo/claim1.PNG)
-![](Demo/claim2.PNG)
-![Credibility Increment](Demo/inCre.PNG)
-![Admin](Demo/creReq.PNG)
+![Login](task/Demo/login.PNG)
+![Dashboard](task/Demo/dashboard.PNG)
+![Claim Evaluation](task/Demo/claim1.PNG)
+![](task/Demo/claim2.PNG)
+![Credibility Increment](task/Demo/inCre.PNG)
+![Admin](task/Demo/creReq.PNG)
 
 ## Initialize Admin User
 
@@ -274,3 +274,4 @@ npm run init-admin
 
 
 This project is licensed under the MIT License.
+
