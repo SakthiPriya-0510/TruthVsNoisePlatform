@@ -4,7 +4,7 @@ const User = require('./models/User');
 require('dotenv').config({ path: __dirname + '/.env' });
 
 // Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/truthvsnoise')
+mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.error('MongoDB connection error:', err));
 
