@@ -9,7 +9,7 @@ const sendEmail = async(to, otp) => {
         // Send email
         const msg = {
             to,
-            from: 'noreply@truthvsnoise.com', // Replace with your verified sender
+            from: process.env.EMAIL_FROM || 'youremail@gmail.com', // Use your verified sender
             subject: 'Your Verification Code',
             html: `
         <h2>Email Verification</h2>
