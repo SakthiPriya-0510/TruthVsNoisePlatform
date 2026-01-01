@@ -256,6 +256,7 @@ NODE_ENV=development
 PORT=5000
 ```
 ## Demo
+![Register](task/Demo/register.PNG)
 ![Login](task/Demo/login.PNG)
 ![Dashboard](task/Demo/dashboard.PNG)
 ![Claim Evaluation](task/Demo/claim1.PNG)
@@ -274,4 +275,5 @@ npm run init-admin
 
 
 This project is licensed under the MIT License.
+
 
